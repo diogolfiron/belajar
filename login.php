@@ -2,6 +2,11 @@
 // Initialize the session
 session_start();
 
+// Check if there is a success message and display it
+if(isset($_SESSION["success_message"])){
+    echo '<div class="alert alert-success" role="alert">' . $_SESSION["success_message"] . '</div>';
+    unset($_SESSION["success_message"]); // Remove the message after displaying it
+}
  
 // Include config file
 require_once "config.php";
@@ -97,7 +102,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
     <link rel="icon" type="image/png" href="images/favicon.png"/>
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-    <title>Login Admin | Coding Cush</title>
+    <title>Bio Data</title>
   </head>
   <body>
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">

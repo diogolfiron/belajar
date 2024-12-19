@@ -199,11 +199,11 @@ if(isset($_POST['submit'])){
 <div class="form-row">
 <div class="form-group col-md-6">
 <label for="inputEmail4">Student Id.</label>
-<input type="text" class="form-control" name="card_no" placeholder="Enter 12-digit Student Id." maxlength="12" required>
+<input type="text" class="form-control" name="card_no" placeholder="Enter 12-digit Student Id." maxlength="12" pattern="\d{12}" title="Wajib 12 digit"required>
 </div>
 <div class="form-group col-md-6">
 <label for="inputPassword4">Mobile No.</label>
-<input type="phone" class="form-control" name="user_phone" placeholder="Enter 10-digit Mobile no." maxlength="10" required>
+<input type="phone" class="form-control" name="user_phone" placeholder="Enter Minimal 11-digit Mobile no." pattern="\d{11,}" title="Minimal 11 digits" required>
 </div>
 </div>
 
@@ -211,7 +211,7 @@ if(isset($_POST['submit'])){
 <div class="form-row">
 <div class="form-group col-md-6">
 <label for="firstname">First Name</label>
-<input type="text" class="form-control" name="user_first_name" placeholder="Enter First Name">
+<input type="text" class="form-control" name="user_first_name" placeholder="Enter First Name" required>
 </div>
 <div class="form-group col-md-6">
 <label for="lastname">Last Name</label>
